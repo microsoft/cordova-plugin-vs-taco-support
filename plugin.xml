@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) Microsoft. All rights reserved.  
+  Licensed under the MIT license. See LICENSE file in the project root for full license information.
+-->
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.microsoft.visualstudio.taco"
+    version="0.0.3-dev">
+    <name>Visual Studio Tools for Apache Cordova CLI Support Plugin</name>
+    <description>Visual Studio Tools for Apache Cordova CLI Support Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,taco,visualstudio,vs,visual,studio</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <hook type="before_prepare" src="hooks/hook-res-native.js" />
+    <hook type="before_prepare" src="hooks/hook-gulp.js" />
+    <hook type="after_prepare" src="hooks/hook-gulp.js" />
+    <hook type="before_compile" src="hooks/hook-gulp.js" />
+    <hook type="after_compile" src="hooks/hook-gulp.js" />
+
+</plugin>
