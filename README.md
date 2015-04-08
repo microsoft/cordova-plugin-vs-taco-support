@@ -12,6 +12,7 @@ This is a sample Cordova plugin designed to add in support for two Visual Studio
 The plugin can also be safely installed and used with Visual Studio projects as the plugin does not interfere with normal operation.
 ##Installation
 From Visual Studio:
+
 1. Open the config.xml designer by double clicking on the file
 2. Select the "Plugins" > "Custom"
 3. Select "Git"
@@ -19,6 +20,7 @@ From Visual Studio:
 4. Click "Add"
 
 From the command line:
+
 1. Install the Cordova CLI
 2. Navigate to your project root
 3. Type "cordova plugin add https://github.com/Chuxel/taco-cordova-support-plugin.git"
