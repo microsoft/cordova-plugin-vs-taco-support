@@ -23,16 +23,15 @@ module.exports = function (context) {
         if (fs.existsSync(path.join(process.cwd(), "gulpfile.js"))) {
             // Hooktasks should be cached after first execution since its at the module level
             if (!hookTasks) {
-                console.log("Checking gulpfile for tasks to run for Cordova events.")
+                console.log("Checking gulpfile for tasks to run for Cordova events.");
                 hookTasks = {};
-                // *** TODO: Only read the first few full lines
                 var gulpfile = fs.readFileSync("gulpfile.js", "utf8");
                 var matches = gulpfile.match(/\/\/\/\s<binding(.+)(?=\/>)/ig);
                 if (matches) {
                     var bindings = matches[0].split(" ");
                     bindings.forEach(function (binding) {
                         binding = binding.replace(/["|']/g, "");
-                        var bindParts = binding.split("=")
+                        var bindParts = binding.split("=");
                         var hook = bindParts[0];
                         var task = bindParts[1];
                         if (hook.indexOf("_") == -1) {
@@ -57,13 +56,13 @@ module.exports = function (context) {
             if (hookTasks[context.hook]) {
                 // Install dependencies in package.json if gulp not present - Run the task either way
                 if (!fs.existsSync(path.join(process.cwd(), "node_modules", "gulp"))) {
-                    console.log("Gulp not found. Installing package dependencies.")
+                    console.log("Gulp not found. Installing package dependencies.");
                     return exec("npm install")
                         .then(function (result) {
                             console.log(result[0]);
-                            if (result[1] != "") {
+                            if (result[1] !== "") {
                                 console.error(result[1]);
-                            };
+                            }
                         })
                         .then(function () { return runGulpTask(context.hook); });
                 } else {
@@ -90,5 +89,5 @@ module.exports = function (context) {
         return deferred.promise;
     }
 
-}
+};
 
