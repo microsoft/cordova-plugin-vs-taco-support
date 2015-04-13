@@ -6,8 +6,8 @@ var fs, path;
 
 module.exports = function(context) {
     
-    // Skip processing if being called from within Visual Studio
-        if (!process.env["MDAVSIXDIR"] && !process.env["WMSJSProjectDirectory"]) {
+    // Skip processing if being called from within Visual Studio or MSBuild
+    if (!process.env["MSBuildProjectDirectory"]) {
         fs = require('fs');
         path = require('path');
 
