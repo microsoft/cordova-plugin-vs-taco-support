@@ -90,5 +90,5 @@ module.exports = function (context) {
         return deferred.promise;
     }
 
-}
+};
 
