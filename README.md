@@ -8,6 +8,7 @@ This is a sample Cordova plugin designed to add in support for two Visual Studio
 
 - Wiring in Gulp tasks as hooks Cordova build events via the Visual Studio 2015 Task Runner Explorer
 - Support for the res/native folder structure
+- Workarounds to support for VS specific config.xml elements for Windows packaging
 
 The plugin can also be safely installed and used with Visual Studio projects as the plugin does not interfere with normal operation.
 ##Installation
