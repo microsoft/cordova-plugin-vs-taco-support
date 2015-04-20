@@ -11,13 +11,13 @@ module.exports = function(context) {
         fs = require('fs');
         path = require('path');
 
-        context.opts.platforms.forEach(function(platform) {
+        context.opts.cordova.platforms.forEach(function(platform) {
             console.log("Processing res/native for " + platform);
             var resNative = path.join(process.cwd(), "res", "native", platform);
             if (fs.existsSync(resNative)) {
                 copyFiles(resNative, path.join(process.cwd(), "platforms", platform));
             }
-        });
+        });            
     }
 
     // Recusive copy function for res/native processing
