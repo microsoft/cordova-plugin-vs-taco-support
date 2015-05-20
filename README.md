@@ -6,10 +6,10 @@ License: MIT
 
 This is a sample Cordova plugin designed to add in support for two Visual Studio [Tools for Apache Cordova](http://aka.ms/cordova) features along with two workarounds for Cordova issues such that they work with the standard Cordova CLI and deriviatives like the Ionic CLI or PhoneGap CLI. Specifically:
 
-- Wiring in Gulp tasks as hooks Cordova build events via the Visual Studio 2015 Task Runner Explorer
 - Support for the res/native folder structure
 - Workarounds to support for VS specific config.xml elements for Windows packaging
 - Fixing symlinks for iOS custom frameworks inside plugins
+- Wiring in Gulp tasks as hooks Cordova build events via the Visual Studio 2015 Task Runner Explorer
 
 The plugin can also be safely installed and used with Visual Studio projects as the plugin does not interfere with normal operation.
 ##Installation
