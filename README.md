@@ -1,15 +1,16 @@
 Visual Studio Tools for Apache Cordova (TACo) Cordova CLI Support Plugin
 ===============
-**Note: This Cordova plugin is intended to be a sample and is not an offically supported Microsoft product.**
+**Note: Version 0.1.0 uses a different plugin ID than previous versions that is more 5.0.0+ / npm compatible. Remove versions of the plugin with the old ID when installing this updated version.**
 
 License: MIT
 
 This is a sample Cordova plugin designed to add in support for two Visual Studio [Tools for Apache Cordova](http://aka.ms/cordova) features along with two workarounds for Cordova issues such that they work with the standard Cordova CLI and deriviatives like the Ionic CLI or PhoneGap CLI. Specifically:
 
 - Support for the res/native folder structure
-- Workarounds to support for VS specific config.xml elements for Windows packaging
-- Fixing symlinks for iOS custom frameworks inside plugins
-- Wiring in Gulp tasks as hooks Cordova build events via the Visual Studio 2015 Task Runner Explorer
+- Support for VS specific config.xml elements for Windows packaging
+- Support for generating an appxbundle for Windows, Windows Phone
+- Fixing symlinks for iOS custom frameworks inside plugins as needed
+- Fixing missing execute bits on Cordova platform scripts on OSX as needed
 
 The plugin can also be safely installed and used with Visual Studio projects as the plugin does not interfere with normal operation.
 ##Installation
@@ -82,3 +83,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+

@@ -26,6 +26,19 @@ module.exports = function(context) {
         var jsProjPath = path.join(winPlatDir, jsProjFile);
         var jsProjXml = parseXml(jsProjPath);
 
+        // Force appxbundle generation
+        var appxBundle = jsProjXml.find(".//AppxBundle");
+        if(!appxBundle) {
+            var newGroup = new et.Element("PropertyGroup");
+            appxBundle = new et.Element("AppxBundle");
+            appxBundle.text = "Always";
+            newGroup.append(appxBundle);
+            newGroup.attrib.Label="Configuration";
+            jsProjXml.getroot().append(newGroup);
+        } else {
+            appxBundle.text = "Always";            
+        }
+        
         if (overrides.certFile) {
             var existingRef = jsProjXml.find(".//None[@Include=\"" + overrides.certFile + "\"]");
             if (!existingRef) {
