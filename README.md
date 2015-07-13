@@ -6,9 +6,10 @@ License: MIT
 
 This is a sample Cordova plugin designed to add in support for two Visual Studio [Tools for Apache Cordova](http://aka.ms/cordova) features along with two workarounds for Cordova issues such that they work with the standard Cordova CLI and deriviatives like the Ionic CLI or PhoneGap CLI. Specifically:
 
-- Support for the res/native folder structure
+- Support for the VS res/native folder structure and Task Runner Explorer 
 - Support for VS specific config.xml elements for Windows packaging
 - Support for generating an appxbundle for Windows, Windows Phone
+- Removing bad plugin related json files when associated platforms folder is not present
 - Fixing symlinks for iOS custom frameworks inside plugins as needed
 - Fixing missing execute bits on Cordova platform scripts on OSX as needed
 
