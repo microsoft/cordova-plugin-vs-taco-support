@@ -4,7 +4,7 @@ Visual Studio Tools for Apache Cordova (TACo) Cordova CLI Support Plugin
 
 License: MIT
 
-This is a sample Cordova plugin designed to add in support for two Visual Studio [Tools for Apache Cordova](http://aka.ms/cordova) features along with two workarounds for Cordova issues such that they work with the standard Cordova CLI and deriviatives like the Ionic CLI or PhoneGap CLI. Specifically:
+This is a sample Cordova plugin designed to add in support three two Visual Studio [Tools for Apache Cordova](http://aka.ms/cordova) features along with number of workarounds for Cordova issues such that they work with the standard Cordova CLI and deriviatives like the Ionic CLI or PhoneGap CLI. Specifically:
 
 - Support for the VS res/native folder structure and Task Runner Explorer 
 - Support for VS specific config.xml elements for Windows packaging
