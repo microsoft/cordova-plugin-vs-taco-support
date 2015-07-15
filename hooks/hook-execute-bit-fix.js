@@ -15,7 +15,6 @@ module.exports = function(context) {
       context.opts.cordova.platforms && 
       !(context.hook == "before_platform_add" && context.opts.platforms.indexOf("ios") >= 0)) {
 
-    console.log("here")
     // Grab the Q, glob node modules from cordova
     Q=context.requireCordovaModule("q");
     // Need to return a promise since glob is async
