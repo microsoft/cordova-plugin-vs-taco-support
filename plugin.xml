@@ -5,7 +5,7 @@
 -->
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="cordova-plugin-vs-taco-support"
-    version="0.1.0">
+    version="0.2.0">
     <name>Visual Studio Tools for Apache Cordova CLI Support Plugin</name>
     <description>Visual Studio Tools for Apache Cordova CLI Support Plugin</description>
     <license>MIT</license>
@@ -23,12 +23,6 @@
 
     <!-- res/native support -->
     <hook type="before_prepare" src="hooks/hook-res-native.js" />
-
-    <!-- Task runner explorer support-->
-    <hook type="before_prepare" src="hooks/hook-gulp.js" />
-    <hook type="after_prepare" src="hooks/hook-gulp.js" />
-    <hook type="before_compile" src="hooks/hook-gulp.js" />
-    <hook type="after_compile" src="hooks/hook-gulp.js" />
 
     <!-- iOS framework symlink fixes -->
     <platform name="ios">
