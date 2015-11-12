@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-vs-taco-support",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Visual Studio Tools for Apache Cordova CLI Support Plugin",
   "repository": {
       "type": "git",

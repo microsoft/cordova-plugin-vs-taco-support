@@ -30,7 +30,7 @@ From the command line:
 
 1. Install the Cordova CLI
 2. Navigate to your project root
-3. Type "cordova plugin add https://github.com/Chuxel/taco-cordova-support-plugin.git"
+3. Type "cordova plugin add cordova-plugin-vs-taco-support"
 
 ## Terms of Use
 By downloading and running this project, you agree to the license terms of the third party application software, Microsoft products, and components to be installed. 
