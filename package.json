@@ -15,5 +15,8 @@
     "studio"
   ],
   "author": "Microsoft <vscordovatools@microsoft.com>",
+  "contributors": [
+    "Akshaya Kumar Sharma <akshayakrsh@gmail.com> (http://www.lordakshaya.com)"
+  ],
   "license": "MIT"
 }
