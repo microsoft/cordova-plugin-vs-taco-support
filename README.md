@@ -1,21 +1,23 @@
-Visual Studio Tools for Apache Cordova (TACo) Cordova CLI Support Plugin
+Cordova CI Support Plugin (cordova-plugin-vs-taco-support)
 ===============
-**Note: This plugin no longer includes support for executing Task Runner Explorer bindings from the command line. Check out [this repository](https://github.com/Chuxel/taco-tricks/tree/master/hook-task-runner-binding) for how to use a Cordova project "hook" to accomplish the same thing.**
-
 License: MIT
 
-This is a sample Cordova plugin designed to add in support for Visual Studio [Tools for Apache Cordova](http://aka.ms/cordova) features along with number of workarounds for Cordova issues such that they work with the standard Cordova CLI and deriviatives like the Ionic CLI or PhoneGap CLI. Specifically:
+The primary intent of this plugin is to resolve issues commonly associated with Cordova CLI-compliant apps (Ex: Cordova, Ionic, PhoneGap local) checked into source control and adds features (res/native) to help developers avoid having to check in the "platforms" folder as this can cause problems particularly if different members of a developer team are on a combination of OSX, Windows, or Linux. It was originally created as part of a tutorial for [Tools for Apache Cordova](http://aka.ms/cordova).
 
-- Support for the VS res/native folder structure 
-- Support for VS specific config.xml elements for Windows packaging
-- Removing bad plugin related json files when associated platforms folder is not present
-- Fixing symlinks for iOS custom frameworks inside plugins as needed
-- Fixing missing execute bits on Cordova platform scripts on OSX as needed
+Specifically, it:
 
-The plugin can also be safely installed and used with Visual Studio projects as the plugin does not interfere with normal operation.
+- Adds in support for the res/native folder that will overlay the contents of the platforms folder so you can add files to the native project without checking native code into source control (via a plugin) - Ex: res/native/Android/AndroidManifest.xml will overwrite the default one before Cordova's "prepare" step.
+- Removes plugins/android.json, plugins/ios.json, plugins/windows.json, or plugins/wp8.json files which can cause strange results if present when adding a platform. (Though files are not removed if the Cordova platforms folder was added to source control.)
+- Fixes for problems with symlinks and execute bits being lost when a plugin or platform is added to source control from Windows (via a plugin) - A common problem for plugins that contain iOS "frameworks".
+- Adds some Windows packaging features and bug fixes (via a plugin) designed for use with versions of Cordova that pre-date the Windows platform's support of build.json
 
 ##Installation
-Note: Cordova 5.1.1 has a bug that can cause plugins installed from a Git repo to fail if the project is on a different drive than your temp folder. Either move the project to the same drive when installing or you can instead download a copy, unzip it, and add the plugin from the filesystem.
+
+From the command line:
+
+1. Install the Cordova CLI (or another compliant CLI)
+2. Navigate to your project root
+3. Type "cordova plugin add cordova-plugin-vs-taco-support"
 
 From Visual Studio:
 
@@ -25,17 +27,19 @@ From Visual Studio:
 3. Enter in "https://github.com/Microsoft/cordova-plugin-vs-taco-support.git" and press the arrow
 4. Click "Add"
 
-
-From the command line:
-
-1. Install the Cordova CLI
-2. Navigate to your project root
-3. Type "cordova plugin add cordova-plugin-vs-taco-support"
+*Note: Cordova 5.1.1 has a bug that can cause plugins installed from a Git repo to fail if the project is on a different drive than your temp folder. Either move the project to the same drive when installing or you can instead download a copy, unzip it, and add the plugin from the filesystem.*
 
 ## Terms of Use
 By downloading and running this project, you agree to the license terms of the third party application software, Microsoft products, and components to be installed. 
 
 The third party software and products are provided to you by third parties. You are responsible for reading and accepting the relevant license terms for all software that will be installed. Microsoft grants you no rights to third party software.
+
+## FAQ
+**Q: What happened to the Visual Studio Task Runner Explorer bindings in this plugin?** <br /> 
+A: In an effort to make this plugin less specific to Visual Studio, the plugin no longer includes support for executing Task Runner Explorer bindings from the command line. However, you can check out [this repository](https://github.com/Chuxel/taco-tricks/tree/master/hook-task-runner-binding) for how to use a Cordova project "hook" to accomplish the same thing.
+
+**Q: Does this require Visual Studio or only run on Windows?** <br /> 
+A: Visual Studio is not at all required. All features work on OSX (and some are specifically for it) with the exception of the Windows platform signing feature as that platform can only be built on Windows.
 
 ## License
 Unless otherwise mentioned, the code samples are released under the MIT license.
