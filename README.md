@@ -22,7 +22,7 @@ From Visual Studio:
 1. Open the config.xml designer by double clicking on the file
 2. Select the "Plugins" > "Custom"
 3. Select "Git"
-3. Enter in "https://github.com/Microsoft/taco-cordova-support-plugin.git" and press the arrow
+3. Enter in "https://github.com/Microsoft/cordova-plugin-vs-taco-support.git" and press the arrow
 4. Click "Add"
 
 
