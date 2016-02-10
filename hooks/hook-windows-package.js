@@ -64,7 +64,8 @@ module.exports = function(context) {
             // Find cordova-lib's node_modules path so we can acquire elementtree since we won't have the context object.
             var cordovaModulePath;
             module.parent.paths.forEach(function (modulePath) {
-                if (modulePath.lastIndexOf("cordova-lib\\node_modules") == modulePath.length - 24) {
+                var libPathSuffix = "cordova-lib\\node_modules";
+                if (modulePath.indexOf(libPathSuffix, modulePath.length - libPathSuffix.length) !== -1) {
                     cordovaModulePath = modulePath;
                 }
             });
