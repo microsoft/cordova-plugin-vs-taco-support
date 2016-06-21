@@ -29,17 +29,20 @@ From Visual Studio:
 
 *Note: Cordova 5.1.1 has a bug that can cause plugins installed from a Git repo to fail if the project is on a different drive than your temp folder. Either move the project to the same drive when installing or you can instead download a copy, unzip it, and add the plugin from the filesystem.*
 
-## Terms of Use
-By downloading and running this project, you agree to the license terms of the third party application software, Microsoft products, and components to be installed. 
-
-The third party software and products are provided to you by third parties. You are responsible for reading and accepting the relevant license terms for all software that will be installed. Microsoft grants you no rights to third party software.
-
 ## FAQ
 **Q: What happened to the Visual Studio Task Runner Explorer bindings in this plugin?** <br /> 
 A: In an effort to make this plugin less specific to Visual Studio, the plugin no longer includes support for executing Task Runner Explorer bindings from the command line. However, you can check out [this repository](https://github.com/Chuxel/taco-tricks/tree/master/hook-task-runner-binding) for how to use a Cordova project "hook" to accomplish the same thing.
 
 **Q: Does this require Visual Studio or only run on Windows?** <br /> 
 A: Visual Studio is not at all required. All features work on OSX (and some are specifically for it) with the exception of the Windows platform signing feature as that platform can only be built on Windows.
+
+## Terms of Use
+By downloading and running this project, you agree to the license terms of the third party application software, Microsoft products, and components to be installed. 
+
+The third party software and products are provided to you by third parties. You are responsible for reading and accepting the relevant license terms for all software that will be installed. Microsoft grants you no rights to third party software.
+
+## Code of Conduct
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## License
 Unless otherwise mentioned, the code samples are released under the MIT license.
